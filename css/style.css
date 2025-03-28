@@ -1,0 +1,302 @@
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/bg3.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Add this to your existing style.css */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.header-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header-text p {
+    margin: 5px 0 0;
+    color: #ffcc00;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main content container */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px; /* Add some padding for smaller screens */
+}
+
+/* Wrapper for content */
+section {
+    width: 100%; /* Make the section take full width on smaller screens */
+    max-width: 900px;  /* Keep a max width for large screens */
+    height: auto; /* Allow content to grow in height */
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Content box flex */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.content-wrapper img {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+    flex: 1;
+}
+
+/* Styling for email links */
+a {
+    color: #ffcc00; /* Set the email link color to a golden color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    color: #fff; /* Change color to white when hovered */
+    text-decoration: underline; /* Add underline when hovered */
+}
+
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Make header text smaller on mobile */
+    }
+
+    nav a {
+        padding: 10px 15px; /* Reduce padding on smaller screens */
+    }
+
+    section {
+        width: 90%; /* Allow the section to be more flexible */
+        max-width: none; /* Remove max width */
+        height: auto; /* Allow section to grow based on content */
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stack content vertically on mobile */
+        align-items: center; /* Center the content */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce footer text size on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Make header text even smaller */
+    }
+
+    nav a {
+        padding: 8px 12px; /* Further reduce padding on very small screens */
+    }
+
+    section {
+        width: 95%; /* Allow the section to take up more space */
+        margin: 10px; /* Reduce margin */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Further reduce footer text size */
+    }
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    gap: 20px;
+}
+
+/* Styling for the social links */
+.social-links, .academic-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+}
+
+/* Styling for individual list items */
+.social-links li, .academic-links li {
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+/* Styling for links */
+.social-links a, .academic-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+/* Styling for the icons */
+.social-links img, .academic-links img {
+    width: 24px; /* Adjust icon size */
+    margin-right: 8px; /* Add space between the icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+/* Only apply hand cursor when hovering over the text (not the icon) */
+.social-links a span, .academic-links a span {
+    cursor: pointer; /* Apply hand cursor only to the text */
+}
+
+/* Hover effect for icons */
+.social-links a:hover img, .academic-links a:hover img {
+    transform: scale(1.2); /* Hover effect */
+}
+
+/* Styling for social media links */
+.social-links a {
+    color: #fff; /* White text for social links */
+}
+
+/* Styling for academic profile links */
+.academic-links a {
+    color: #00bcd4; /* Blue color for academic links */
+    font-size: 1.1rem; /* Slightly larger text */
+}
+
+.academic-links a img {
+    width: 20px;
+    height: 20px; /* Adjust size for academic logos */
+}
+
+/* Additional spacing between titles and links */
+h2 {
+    margin-bottom: 20px; /* Space below titles */
+}
+
+.quote-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.quote-container img {
+    max-width: 150px;
+    margin-right: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.quote-container blockquote {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+.quote-container blockquote:before {
+    content: open-quote;
+    font-size: 2rem;
+    line-height: 0;
+    vertical-align: -0.4em;
+    color: #4a90e2;
+}
+
+.quote-container blockquote:after {
+    content: close-quote;
+    font-size: 2rem;
+    line-height: 0;
+    vertical-align: -0.4em;
+    color: #4a90e2;
+}
+
+.quote-container blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
